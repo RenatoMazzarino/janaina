@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parecer Jurídico Completo e Detalhado - Processo 0010985-97.2023.5.15.0060</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm; /* Reduzida para mais espaço de conteúdo */
+        }
+
+        body {
+            font-family: 'Verdana', 'Geneva', sans-serif; /* Alterado para Verdana para clareza */
+            line-height: 1.7;
+            color: #2c3e50; /* Dark Matte Blue */
+            background-color: #f4f4f0; /* Um bege bem claro, quase branco para o fundo da tela */
+            margin: 0;
+            padding: 0;
+            font-size: 10.5pt; /* Ligeiramente menor para mais conteúdo */
+        }
+
+        .page-container {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 1.8cm; /* Ajustado */
+            margin: 1cm auto;
+            background-color: #fdfbf5; /* Cream/Beige principal para o conteúdo */
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #1a2e3f; /* Azul escuro matte para títulos */
+            margin-top: 1.6em;
+            margin-bottom: 0.9em;
+            padding-bottom: 0.4em;
+            border-bottom: 1px solid #d3c8b4; /* Linha bege sutil */
+            font-weight: normal; /* Mais suave */
+        }
+
+        h1 { font-size: 20pt; text-align: center; border-bottom-width: 2px; }
+        h2 { font-size: 17pt; }
+        h3 { font-size: 14pt; }
+        h4 { font-size: 12pt; color: #3b5266; border-bottom-style: dotted;}
+        h5 { font-size: 11pt; font-style: italic; color: #4a657c; margin-top:1.2em; border-bottom:none;}
+
+
+        p { margin-bottom: 1.1em; text-align: justify; }
+        ul, ol { margin-bottom: 1.1em; padding-left: 25px; } /* Reduzido padding */
+        li { margin-bottom: 0.6em; }
+
+        strong, b { color: #003366; font-weight: bold; } /* Azul mais forte para destaque */
+        em.ref { font-style: normal; font-size: 0.85em; color: #5a7287; display: block; margin-top: -0.5em; margin-bottom: 0.5em; text-align: right; }
+
+        /* Estilo para Termos Jurídicos com Tooltip */
+        .term {
+            text-decoration: underline dotted #5a7287;
+            cursor: help;
+            position: relative;
+            color: #004080; /* Destaque para o termo */
+            font-weight: bold;
+        }
+        .term .tooltip-text {
+            visibility: hidden;
+            width: 280px;
+            background-color: #2c3e50; /* Fundo do tooltip */
+            color: #fdfbf5; /* Texto do tooltip */
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 10;
+            bottom: 135%; /* Posição acima do termo */
+            left: 50%;
+            margin-left: -140px; /* Metade da largura para centralizar */
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .term:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .term .tooltip-text::after { /* Setinha do tooltip */
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+
+        table { width: 100%; border-collapse: separate; border-spacing:0; margin: 25px 0; font-size: 0.9em; border: 1px solid #bcae96;}
+        th, td { border: 1px solid #d3c8b4; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #e1d9c7; color: #2c3e50; font-weight: bold; }
+        tr:nth-child(even) td { background-color: #f7f4ed; }
+        tr:hover td { background-color: #efe8d9; } /* Hover sutil nas linhas */
+
+        .callout-box {
+            background-color: #e9e4d9; /* Um bege um pouco mais escuro */
+            border: 1px solid #d3c8b4;
+            border-left: 8px solid #003366; /* Azul forte na borda esquerda */
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 6px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+        }
+        .callout-box h4 { margin-top: 0; color: #003366; border-bottom: 1px dotted #003366; }
+        .callout-box p, .callout-box ul {font-size: 0.95em;}
+
+        .success-text { color: #28a745; font-weight: bold; } /* Verde para sucesso */
+        .failure-text { color: #dc3545; font-weight: bold; } /* Vermelho para falha */
+        .neutral-text { color: #6c757d; font-weight: bold; } /* Cinza para neutro */
+
+        .process-step {
+            margin-bottom: 2em;
+            padding: 1.5em;
+            background-color: #ffffff; /* Caixa branca para cada passo */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .process-step h4 { margin-top: 0; color: #004080; }
+        .process-step blockquote {
+            border-left: 4px solid #a3b1c6; /* Azul acinzentado */
+            margin: 1em 0;
+            padding: 0.8em 1.2em;
+            background-color: #f8f9fa; /* Fundo levemente cinza para citação */
+            font-style: italic;
+            color: #495057;
+        }
+
+        .signature-block { margin-top: 60px; text-align: right; }
+        .signature-block p { margin-bottom: 6px; text-align: right; font-size: 11pt;}
+        .signature-block strong {font-size: 11.5pt;}
+        .signature-block em {font-size: 10pt;}
+
+        /* Novos estilos para a seção de cálculos e projeção */
+        .calculation-section {
+            margin-top: 2em;
+            padding-top: 1em;
+            border-top: 2px solid #1a2e3f;
+        }
+
+        .calculation-box {
+            background-color: #eef; /* Light blue background */
+            border: 1px solid #b0c4de; /* Light steel blue border */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .calculation-box h4 {
+            color: #004080;
+            margin-top: 0;
+            border-bottom: 1px dotted #004080;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .calculation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .calculation-table th, .calculation-table td {
+            border: 1px solid #d3c8b4;
+            padding: 8px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .calculation-table th {
+            background-color: #dbe2ed; /* Lighter blue */
+            font-weight: bold;
+            color: #1a2e3f;
+        }
+
+        .summary-box {
+            background-color: #d4edda; /* Light green for success */
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #155724; /* Dark green */
+        }
+
+         .projection-box {
+            background-color: #fff3cd; /* Light yellow for warning/information */
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #856404; /* Dark yellow */
+        }
+         .projection-box h4 {
+            color: #856404;
+            margin-top: 0;
+            border-bottom: 1px dotted #856404;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para a Linha do Tempo */
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding: 20px 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #a3b1c6; /* Cor da linha */
+            transform: translateX(-50%);
+        }
+
+        .timeline li {
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .timeline li:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline li:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline li::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 12px;
+            height: 12px;
+            background-color: #003366; /* Cor do círculo */
+            border: 2px solid #fdfbf5;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline li:nth-child(odd)::after {
+            right: -6px;
+        }
+
+        .timeline li:nth-child(even)::after {
+            left: -6px;
+        }
+
+         .timeline li .timeline-content {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            text-align: left; /* Garante que o texto dentro da caixa esteja alinhado à esquerda */
+            display: inline-block; /* Ajusta o tamanho da caixa ao conteúdo */
+            width: 100%; /* Permite que a caixa ocupe a largura disponível */
+            box-sizing: border-box;
+        }
+
+        .timeline li:nth-child(odd) .timeline-content {
+             text-align: right; /* Alinha o texto da caixa à direita para itens ímpares */
+        }
+
+
+        .timeline li .timeline-content h5 {
+            margin-top: 0;
+            color: #004080;
+            border-bottom: 1px dotted #d3c8b4;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+         .timeline li .timeline-content p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 0.5em;
+             text-align: justify; /* Justifica o texto dentro da caixa */
+        }
+
+        /* Tooltip para a Linha do Tempo */
+        .timeline .timeline-event {
+            cursor: help;
+            position: relative;
+            display: block; /* Torna o evento um bloco para melhor interação */
+        }
+
+         .timeline .timeline-event .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #2c3e50;
+            color: #fdfbf5;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 10;
+            top: 100%; /* Posição abaixo do evento */
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px; /* Espaço entre o evento e o tooltip */
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+            font-size: 0.9em;
+            line-height: 1.4;
+            pointer-events: none; /* Permite interagir com elementos atrás do tooltip */
+        }
+
+        .timeline li:nth-child(odd) .timeline-event .tooltip-text {
+             left: auto;
+             right: 50%;
+             transform: translateX(50%);
+        }
+
+
+        .timeline .timeline-event:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .timeline .timeline-event .tooltip-text::before { /* Setinha do tooltip */
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #2c3e50 transparent;
+        }
+
+         .timeline li:nth-child(odd) .timeline-event .tooltip-text::before {
+             left: auto;
+             right: 50%;
+             transform: translateX(50%);
+         }
+
+        /* Estilos para Artigos de Lei */
+        .legal-article {
+            background-color: #eef;
+            border: 1px solid #b0c4de;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .legal-article strong {
+            color: #004080;
+        }
+         .legal-article .article-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+            color: #3b5266;
+        }
+         .legal-article .explanation {
+            font-size: 0.95em;
+            line-height: 1.5;
+            border-top: 1px dotted #b0c4de;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* Placeholder para Imagem */
+        .image-placeholder {
+            display: block;
+            width: 100%;
+            height: 150px; /* Altura Sugerida */
+            background-color: #e0e0e0;
+            color: #666;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Parecer Jurídico Completo e Detalhado</h1>
+        <p><strong>Para:</strong> Janaina dos Santos Lima</p>
+        <p><strong>De:</strong> Renato Mazzarino (founder, CEO)</p>
+        <p><strong>Data:</strong> 18 de maio de 2025</p>
+        <p><strong>Assunto:</strong> Análise aprofundada do processo trabalhista ATOrd 0010985-97.2023.5.15.0060, movido em face da Beneficência Portuguesa de Amparo, com detalhamento das fases processuais, decisões, fundamentações e estimativas de valores.</p>
+
+        <p>Prezada Janaina,</p>
+        <p>Com o intuito de lhe oferecer a visão mais clara e completa possível sobre seu processo trabalhista, preparei este parecer detalhado. A seguir, exploraremos cada etapa, as decisões dos juízes, os fundamentos legais e as implicações financeiras, utilizando uma linguagem acessível e recursos que facilitam a compreensão.</p>
+
+        <h2>I. Entendendo o Seu Processo: Seus Pedidos Iniciais</h2>
+        <p>Quando você ingressou com a ação trabalhista <em class="ref">(ATOrd 0010985-97.2023.5.15.0060, autuado em 03/07/2023)</em>, buscou o reconhecimento de diversos direitos que entendia terem sido violados pela empresa Beneficência Portuguesa de Amparo durante seu contrato de trabalho. O valor inicial atribuído à causa foi de R$ 220.558,62. Seus principais pedidos incluíam:</p>
+        <ul>
+            <li><strong><span class="term">Rescisão Indireta<span class="tooltip-text">A Rescisão Indireta ocorre quando o empregado considera o contrato de trabalho rompido por uma falta grave cometida pelo empregador. É como se o empregado aplicasse uma 'justa causa' na empresa, tendo direito a todas as verbas rescisórias como se tivesse sido demitido sem justa causa (aviso prévio, multa de 40% do FGTS, etc.). Prevista no Artigo 483 da CLT.</span></span> do Contrato de Trabalho:</strong> Você alegou que a empresa cometeu faltas graves que tornaram insustentável a continuação do seu trabalho.</li>
+            <li><strong>Verbas Rescisórias Decorrentes:</strong> Como consequência da rescisão indireta, você pediu o pagamento de aviso prévio, saldo de salário, férias proporcionais + 1/3, 13º salário proporcional, saque do FGTS acrescido da multa de 40%.</li>
+            <li><strong>Adicional de Insalubridade:</strong> Requereu o pagamento do adicional em grau máximo (40%) por exposição a agentes nocivos à saúde em seu ambiente de trabalho, conforme <span class="term">NR15<span class="tooltip-text">A Norma Regulamentadora nº 15 (NR15) estabelece as atividades e operações consideradas insalubres, bem como os limites de tolerância para agentes agressivos à saúde do trabalhador. O Anexo 14 trata especificamente de agentes biológicos, relevante para a área da saúde.</span></span>.</li>
+            <li><strong>Horas Extras e Intervalo Intrajornada:</strong> Pediu o pagamento de horas trabalhadas além da jornada normal e a indenização pelo intervalo para refeição e descanso não concedido integralmente, conforme <span class="term">Artigos 71 e seguintes da CLT<span class="tooltip-text">O Artigo 71 da CLT estabelece a obrigatoriedade de um intervalo para repouso ou alimentação durante a jornada de trabalho contínua que exceda 6 horas. Para jornadas de até 6 horas, o intervalo mínimo é de 15 minutos. Para jornadas superiores a 6 horas, o mínimo é de 1 hora.</span></span>.</li>
+            <li><strong>Doença Ocupacional e Indenizações:</strong> Alegou ter desenvolvido/agravado problemas de saúde (coluna, questões psicológicas, AVC) em decorrência das condições de trabalho, pedindo indenizações por danos morais e materiais, com base nos <span class="term">Artigos 186 e 927 do Código Civil<span class="tooltip-text">O Artigo 186 do Código Civil define o ato ilícito como aquele que, por ação ou omissão voluntária, negligência ou imprudência, violar direito e causar dano a outrem. O Artigo 927 estabelece que aquele que, por ato ilícito (art. 186 e 187), causar dano a outrem, fica obrigado a repará-lo.</span></span> e <span class="term">Artigo 7º, XXVIII da Constituição Federal<span class="tooltip-text">O Artigo 7º, inciso XXVIII, da Constituição Federal, trata do seguro contra acidentes de trabalho, a cargo do empregador, sem excluir a indenização a que este está obrigado, quando incorrer em dolo ou culpa.</span></span>.</li>
+            <li><strong>Multas dos Artigos 467 e 477 da CLT:</strong> A multa do <span class="term">art. 467 da CLT<span class="tooltip-text">O Artigo 467 da CLT determina que, em caso de rescisão de contrato de trabalho, havendo controvérsia sobre o montante das verbas rescisórias, o empregador é obrigado a pagar ao trabalhador, na data do comparecimento à Justiça do Trabalho, a parte incontroversa dessas verbas, sob pena de pagá-las com acréscimo de cinquenta por cento.</span></span> é devida se a empresa não paga as verbas rescisórias incontroversas na primeira audiência. A multa do <span class="term">art. 477 da CLT<span class="tooltip-text">O Artigo 477 da CLT estabelece prazos para o pagamento das verbas rescisórias após o término do contrato de trabalho. O § 6º define o prazo de 10 dias contados a partir do término do contrato. O § 8º prevê uma multa equivalente a um salário do empregado caso o pagamento não seja feito dentro do prazo.</span></span> é por atraso no pagamento das verbas rescisórias após o término do contrato.</li>
+            <li><strong>Justiça Gratuita:</strong> Solicitou isenção das custas processuais por não ter condições de pagá-las, conforme <span class="term">Artigo 790, §§ 3º e 4º da CLT<span class="tooltip-text">O Artigo 790 da CLT trata das custas processuais na Justiça do Trabalho. Os §§ 3º e 4º estabelecem que o benefício da justiça gratuita será concedido àqueles que perceberem salário igual ou inferior a 40% do limite máximo dos benefícios do Regime Geral de Previdência Social, ou àqueles que comprovarem insuficiência de recursos para o pagamento das custas do processo.</span></span> e <span class="term">Súmula 463 do TST<span class="tooltip-text">A Súmula nº 463 do Tribunal Superior do Trabalho (TST) orienta que a partir de 11/11/2017 (Lei nº 13.467/2017), a assistência judiciária gratuita será concedida à parte que comprovar insuficiência de recursos para o pagamento das custas do processo.</span></span>.</li>
+        </ul>
+
+        <h2>II. A Jornada do Seu Processo Judicial: Uma Linha do Tempo Visual</h2>
+        <p>Para facilitar a visualização do andamento do seu processo, preparei uma linha do tempo com os eventos mais importantes. Ao passar o mouse sobre cada ponto, você verá uma breve explicação.</p>
+
+        <ul class="timeline">
+            <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-file-signature"></i> 03/07/2023</h5>
+                        <p><strong>Ajuizamento da Ação:</strong> Seu processo teve início com a apresentação da petição inicial na Vara do Trabalho de Amparo.</p>
+                    </div>
+                     <span class="tooltip-text">Este é o marco inicial do seu processo, quando seus pedidos foram formalmente apresentados à Justiça do Trabalho.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-calendar-alt"></i> 07/11/2023</h5>
+                        <p><strong>Audiência Inicial:</strong> Primeira audiência realizada, onde a empresa apresentou defesa e, sem acordo, o juiz determinou a realização de perícias.</p>
+                    </div>
+                     <span class="tooltip-text">Nesta audiência, as partes tentam um acordo. Como não houve, o processo seguiu para a fase de produção de provas técnicas, como as perícias.</span>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-flask"></i> 23/04/2024</h5>
+                        <p><strong>Perícia de Insalubridade:</strong> Realização da diligência pericial no local de trabalho para avaliar as condições de insalubridade.</p>
+                    </div>
+                     <span class="tooltip-text">O perito engenheiro visitou o local para verificar se havia exposição a agentes nocivos que justificassem o adicional de insalubridade.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-user-md"></i> 25/03/2024</h5>
+                        <p><strong>Perícia Médica:</strong> Realização da perícia médica para avaliar a relação entre suas condições de saúde e o trabalho.</p>
+                    </div>
+                     <span class="tooltip-text">O perito médico analisou seu histórico de saúde e exames para determinar se suas doenças tinham relação com as atividades na empresa.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-file-medical"></i> 03/05/2024 e 22/05/2024</h5>
+                        <p><strong>Juntada dos Laudos Periciais:</strong> Os laudos de insalubridade e médico foram anexados ao processo.</p>
+                    </div>
+                     <span class="tooltip-text">Os resultados técnicos das perícias são essenciais para o juiz decidir sobre os pedidos relacionados à insalubridade e doença ocupacional.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-calendar-check"></i> 18/09/2024</h5>
+                        <p><strong>Audiência de Instrução:</strong> Audiência para coleta de provas orais (depoimentos das partes e testemunhas).</p>
+                    </div>
+                     <span class="tooltip-text">Nesta fase, as partes e testemunhas são ouvidas para esclarecer os fatos do processo. O juiz encerrou a instrução após esta audiência.</span>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-balance-scale"></i> 26/09/2024</h5>
+                        <p><strong>Sentença (1ª Instância):</strong> O juiz da Vara do Trabalho proferiu a primeira decisão do processo.</p>
+                    </div>
+                     <span class="tooltip-text">A sentença é a decisão do juiz de primeira instância sobre os pedidos apresentados na ação trabalhista.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-upload"></i> 11/10/2024</h5>
+                        <p><strong>Interposição do Recurso Ordinário:</strong> Sua defesa apresentou recurso para o TRT-15.</p>
+                    </div>
+                     <span class="tooltip-text">Quando uma parte não concorda com a sentença, ela pode recorrer para o Tribunal (2ª instância) para que a decisão seja reavaliada.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-gavel"></i> 25/02/2025</h5>
+                        <p><strong>Acórdão do TRT-15 (2ª Instância):</strong> Os desembargadores do Tribunal Regional julgaram seu recurso.</p>
+                    </div>
+                     <span class="tooltip-text">O acórdão é a decisão proferida por um colegiado de juízes (desembargadores) de um Tribunal sobre um recurso.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-file-alt"></i> Maio/2025</h5>
+                        <p><strong>Embargos Declaratórios:</strong> Sua defesa apresentou embargos para esclarecer pontos do acórdão.</p>
+                    </div>
+                     <span class="tooltip-text">Este recurso busca esclarecer omissões, contradições ou obscuridades na decisão do Tribunal. No seu caso, foram rejeitados.</span>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-hourglass-end"></i> A Definir</h5>
+                        <p><strong>Trânsito em Julgado:</strong> Fim da possibilidade de recursos.</p>
+                    </div>
+                     <span class="tooltip-text">Momento em que a decisão se torna definitiva e não pode mais ser modificada por recursos. O processo retorna para a Vara de origem.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-calculator"></i> A Definir</h5>
+                        <p><strong>Liquidação de Sentença:</strong> Cálculo dos valores exatos a serem pagos.</p>
+                    </div>
+                     <span class="tooltip-text">Nesta fase, um contador (judicial ou das partes) transforma os direitos reconhecidos na decisão em valores monetários precisos, com correção e juros.</span>
+                </div>
+            </li>
+             <li>
+                <div class="timeline-event">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-money-check-alt"></i> A Definir</h5>
+                        <p><strong>Execução:</strong> Cobrança e pagamento dos valores devidos.</p>
+                    </div>
+                     <span class="tooltip-text">Se a empresa não pagar voluntariamente após a liquidação, inicia-se esta fase para buscar o pagamento forçado (ex: bloqueio de contas, penhora).</span>
+                </div>
+            </li>
+        </ul>
+
+        <h2>III. A Jornada do Seu Processo Judicial: Passo a Passo Detalhado</h2>
+        <p>Vamos percorrer agora cada uma das etapas importantes do seu processo, com mais detalhes sobre o que aconteceu em cada uma delas.</p>
+
+        <div class="process-step">
+            <h4>1. Ação Inicial e Primeiros Passos (<i class="fas fa-calendar-alt"></i> Julho/2023)</h4>
+            <p>Seu processo teve início em <strong>03 de julho de 2023</strong>, quando a petição inicial foi protocolada na Vara do Trabalho de Amparo <em class="ref">(ATOrd, Fl. 1)</em>. A petição inicial é o documento onde você, por meio do seu advogado, apresentou todos os seus pedidos e explicou os motivos pelos quais acreditava ter direitos a serem reconhecidos pela empresa Beneficência Portuguesa de Amparo. O valor que você atribuiu inicialmente à causa foi de R$ 220.558,62, representando a soma estimada de todos os seus pedidos na época.</p>
+            <p>Logo em seguida, em <strong>04 de julho de 2023</strong>, o juiz proferiu um <span class="term">despacho<span class="tooltip-text">Despacho é um ato do juiz no processo que dá andamento ao caso, mas sem decidir o mérito (quem tem razão). São ordens para que as partes ou a secretaria do juízo façam algo.</span></span> <em class="ref">(ATOrd, ID 208a01e, Fl. 2)</em>. Neste despacho, o juiz ordenou a <span class="term">citação<span class="tooltip-text">Citação é a comunicação oficial e formal para a parte contrária (a empresa, no seu caso) de que um processo foi aberto contra ela e que ela tem um prazo para se defender.</span></span> da empresa, ou seja, a comunicação oficial de que você havia entrado com o processo, e marcou a data da primeira audiência.</p>
+        </div>
+
+        <div class="process-step">
+            <h4>2. A Defesa da Empresa (Contestação) (<i class="fas fa-file-alt"></i> Antes da Audiência Inicial)</h4>
+            <p>A empresa Beneficência Portuguesa de Amparo, ao ser citada, teve a oportunidade de apresentar sua defesa. Essa defesa é chamada de <span class="term">contestação<span class="tooltip-text">Contestação é a resposta da parte Reclamada (a empresa) aos pedidos feitos pela parte Reclamante (você) na petição inicial. É onde a empresa apresenta seus argumentos e provas para tentar derrubar os seus pedidos.</span></span>. No processo trabalhista, a empresa deve apresentar a contestação antes da audiência inicial <em class="ref">(Art. 847, CLT)</em>. A defesa da empresa foi juntada e analisada na audiência de 07/11/2023 <em class="ref">(Ata ATOrd, ID d32d6ed, Fl. 6)</em>.</p>
+            <p>Na contestação, a empresa geralmente tenta mostrar que os seus pedidos não têm fundamento. No seu caso, a empresa argumentou, por exemplo, que fornecia os Equipamentos de Proteção Individual (EPIs) corretamente, que a jornada 12x36 que você fazia era válida, que não havia relação entre as doenças que você alegou ter e o trabalho na empresa, e que o episódio de 01/04/2023 (quando houve a alegação de que você estaria embriagada) justificava as punições que eles aplicaram (suspensão e advertência).</p>
+        </div>
+
+        <div class="process-step">
+            <h4>3. Audiência Inicial e a Necessidade de Perícias (<i class="fas fa-calendar-alt"></i> Novembro/2023)</h4>
+            <p>A primeira audiência aconteceu em <strong>07 de novembro de 2023</strong> <em class="ref">(Ata ATOrd, ID d32d6ed, Fls. 5-10)</em>. O objetivo principal desta audiência é tentar um <span class="term">acordo<span class="tooltip-text">Acordo judicial é quando as partes de um processo chegam a um consenso e resolvem a disputa entre elas, com a aprovação do juiz.</span></span> entre você e a empresa para encerrar o processo rapidamente. Como não houve acordo, o processo continuou.</p>
+            <p>Nesta audiência, o juiz identificou que alguns dos seus pedidos dependiam de conhecimentos técnicos específicos para serem avaliados, como as condições de trabalho e a sua saúde. Por isso, ele determinou a realização de duas <span class="term">perícias<span class="tooltip-text">Perícia é um exame técnico feito por um especialista (perito) nomeado pelo juiz para esclarecer fatos que dependem de conhecimento científico ou técnico, como condições de trabalho (insalubridade, periculosidade) ou questões médicas (doenças, acidentes).</span></span>:</p>
+            <ul>
+                <li><i class="fas fa-flask"></i> <strong>Perícia de Insalubridade:</strong> Para verificar se o ambiente e as atividades que você realizava na empresa eram insalubres (prejudiciais à saúde) e em qual grau.</li>
+                <li><i class="fas fa-user-md"></i> <strong>Perícia Médica:</strong> Para avaliar suas alegações de doença ocupacional e verificar se havia relação (nexo causal ou concausal) entre os problemas de saúde que você apresentou e o seu trabalho na empresa.</li>
+            </ul>
+            <p>Para realizar essas perícias, o juiz nomeou o Sr. Luiz Antonio Henrique Pinto como perito para a insalubridade e o Dr. Ricardo Sallai Viciana como perito médico.</p>
+        </div>
+
+        <div class="process-step">
+            <h4>4. As Perícias – Peças-Chave na Apuração dos Fatos (<i class="fas fa-file-medical"></i> 2023/2024)</h4>
+            <p>As perícias são etapas muito importantes, pois os laudos dos peritos ajudam o juiz a decidir sobre questões técnicas. Os peritos são profissionais de confiança do juízo e agem de forma imparcial.</p>
+
+            <h5>4.1 Perícia de Insalubridade (<i class="fas fa-flask"></i> Realizada em 23/04/2024)</h5>
+            <p>O perito engenheiro Luiz Antonio Henrique Pinto visitou o local onde você trabalhava para analisar as condições ambientais e as atividades que você desempenhava. O laudo pericial <em class="ref">(ID be65f7e, citado na Sentença ATOrd, Fl. 21)</em> foi favorável ao seu pedido de adicional de insalubridade. O juiz, ao citar o laudo na sentença, destacou as seguintes conclusões do perito:</p>
+            <blockquote>"observou-se a ausência de registros de entrega de <span class="term">Equipamentos de Proteção Individual (EPIs)<span class="tooltip-text">EPIs são dispositivos de uso individual que o trabalhador utiliza para se proteger de riscos à sua segurança e saúde no trabalho, como luvas, máscaras, óculos, etc. A empresa tem a obrigação de fornecer, fiscalizar o uso e comprovar a entrega.</span></span>, apresentados pela Reclamada, inexistindo qualquer evidência de fornecimento REGULAR de EPIs ao (a) Reclamante, onde analisa-se e considera-se somente as entregas de EPIs que estejam em total consonância com as alíneas do item 6.5.1 da NR06” e concluiu que “diante da análise dos fatos relatados neste Laudo, da análise das atividades da Reclamante, de sua própria oitiva e da análise das normas vigentes conclui-se que as atividades da Reclamante se caracterizam pelo anexo 14 da <span class="term">NR15<span class="tooltip-text">A Norma Regulamentadora nº 15 (NR15) do Ministério do Trabalho lista as atividades e operações que são consideradas insalubres e estabelece os limites de tolerância para agentes agressivos. O Anexo 14 da NR15 trata especificamente dos agentes biológicos, comuns em ambientes de saúde.</span></span> por todo o período imprescrito em grau máximo 40%”." <em class="ref">(Sentença 1ª Instância, ATOrd, ID 6554fad, Fl. 21)</em></blockquote>
+            <p>Em resumo, o perito constatou que a empresa não comprovou que fornecia os EPIs de forma correta e regular e que suas atividades a expunham a agentes biológicos que justificavam o pagamento do adicional no grau máximo (40%).</p>
+
+            <h5>4.2 Perícia Médica (<i class="fas fa-user-md"></i> Realizada em 25/03/2024)</h5>
+            <p>O perito médico Dr. Ricardo Sallai Viciana avaliou sua saúde, analisou seus exames e prontuários médicos e conversou com você para entender seu histórico. O objetivo era verificar se as doenças que você alegou (problemas na coluna, questões psicológicas, AVC) tinham alguma relação com o trabalho na Beneficência Portuguesa. As conclusões do laudo médico <em class="ref">(ID e65cd97, citado na Sentença ATOrd, Fl. 24)</em>, neste ponto, foram desfavoráveis a você.</p>
+            <p>O juiz resumiu a conclusão do perito sobre a relação das suas doenças com o trabalho:</p>
+             <blockquote>
+                "Primeiramente quanto ao quadro descrito como possível quadro de embriaguez ou alteração do humor com lapsos de memória, este Perito ressalta que não há possibilidade técnica para que no momento atual seja avaliada se a Reclamante se encontrava embriagada na data referida (01-04-23). (...) Ainda, não se pode atribuir os achados na tomografia de 25-04-23 como ocorridos no dia 01-04-23, até mesmo frente às características da lacuna isquêmica identificada ser antiga e não podendo ser atribuída a um evento ocorrido poucos dias antes (...) Quanto ao quadro vertebral, deve-se destacar que se trata de um quadro <span class="term">multifatorial<span class="tooltip-text">Uma doença multifatorial é aquela que tem várias causas ou fatores que contribuem para o seu desenvolvimento, não sendo causada por um único fator isolado, como o trabalho.</span></span>... A Reclamante apresentou o exame complementar datado de 27-05-23, sendo que no prontuário médico apresentado há queixas de dores crônicas bem antes da contratação na Reclamada. (...) Assim, entendo que o quadro vertebral não guarda nexo de causalidade com o labor na Reclamada." <em class="ref">(Sentença 1ª Instância, ATOrd, ID 6554fad, Fl. 24)</em>
+            </blockquote>
+            <p>O perito médico concluiu que não havia relação entre as suas queixas na coluna e o trabalho na empresa, citando que você já tinha histórico de dores antes de ser contratada. Sobre o episódio de 01/04/2023, ele disse que não era possível saber se você estava embriagada na data, mas que o exame de tomografia mostrou que o AVC era antigo e não estava relacionado àquele dia. Ele também mencionou a possibilidade de sintomas psiquiátricos relacionados à cessação do tabagismo.</p>
+            <p>O perito também avaliou que, no momento da perícia, você não estava incapaz para o trabalho de forma permanente ou definitiva.</p>
+        </div>
+
+        <div class="process-step">
+            <h4>5. Audiência de Instrução – A Hora da Prova Oral (<i class="fas fa-calendar-check"></i> Setembro/2024)</h4>
+            <p>Depois que os laudos periciais foram juntados ao processo, foi marcada a <span class="term">Audiência de Instrução<span class="tooltip-text">A Audiência de Instrução é a fase do processo onde as partes e as testemunhas são ouvidas pelo juiz para esclarecer os fatos e produzir provas orais.</span></span>, que aconteceu em <strong>18 de setembro de 2024</strong> <em class="ref">(Ata ATOrd, ID 2d8976f, Fls. 13-17)</em>. O objetivo aqui é colher <span class="term">provas orais<span class="tooltip-text">Prova oral é aquela produzida pela fala das pessoas envolvidas no processo, como o depoimento das partes e o que as testemunhas declaram.</span></span>, ou seja, ouvir o que as pessoas têm a dizer sobre os fatos.</p>
+            <ul>
+                <li><i class="fas fa-user"></i> <strong>Seu Depoimento Pessoal:</strong> Você foi ouvida pelo juiz. Conforme o resumo na sentença <em class="ref">(Resumo na Sentença 1ª Instância, ATOrd, ID 6554fad, Fl. 23)</em>, você disse que não estava embriagada no dia 01/04/2023, mas que não se lembrava claramente dos fatos e tinha uma "lacuna" na memória sobre o ocorrido. Você também informou que já estava trabalhando em outra empresa e que não havia sido afastada pelo INSS.</li>
+                <li><i class="fas fa-user-tie"></i> <strong>Depoimento da Preposta da Empresa:</strong> A representante da empresa também foi ouvida.</li>
+                <li><i class="fas fa-users"></i> <strong>Prova Testemunhal:</strong> A Sra. Ariane Stephany da Silva, que foi sua colega e testemunha no processo, foi ouvida. Ela disse que te viu no dia do suposto episódio de embriaguez e que você não parecia embriagada, embora outra colega tenha te descrito como "alterada". Ela também mencionou que o episódio causou desconforto entre os colegas <em class="ref">(Resumo na Sentença 1ª Instância, ATOrd, ID 6554fad, Fl. 24)</em>. O juiz decidiu não permitir algumas perguntas feitas por sua advogada e não ouviu outras testemunhas que você havia levado, entendendo que as provas já eram suficientes <em class="ref">(Ata ATOrd, ID 2d8976f, Fls. 15-16)</em>.</li>
+            </ul>
+            <p>Após a coleta dessas provas, o juiz declarou que a fase de instrução (produção de provas) estava encerrada e o processo ficou pronto para ele dar a sua decisão (sentença).</p>
+        </div>
+
+        <div class="process-step">
+            <h4>6. A Sentença da Vara do Trabalho de Amparo (1ª Instância – <i class="fas fa-balance-scale"></i> Setembro/2024)</h4>
+            <p>Em <strong>26 de setembro de 2024</strong>, o Juiz do Trabalho Substituto Pedro Augusto Vecchi Moreira proferiu a <span class="term">sentença<span class="tooltip-text">Sentença é a decisão final do juiz de primeira instância sobre os pedidos de um processo. É onde ele diz quem tem razão e quais direitos foram reconhecidos.</span></span> <em class="ref">(ATOrd, ID 6554fad, Fls. 18-29)</em>. Ele julgou seus pedidos <span class="neutral-text">parcialmente procedentes</span>, ou seja, acolheu alguns pedidos e negou outros. Veja o que ele decidiu sobre cada ponto principal:</p>
+
+            <h5><i class="fas fa-check-circle success-text"></i> Adicional de Insalubridade: <span class="success-text">DEFERIDO</span></h5>
+            <p>O juiz concordou com o laudo do perito e reconheceu que você trabalhava em condições insalubres em grau máximo (40%) porque a empresa não comprovou o fornecimento regular de EPIs. Ele condenou a empresa a pagar as diferenças desse adicional, com os reflexos em férias, 13º salário e FGTS. A base de cálculo do adicional foi o salário mínimo, conforme a lei e decisões do Supremo Tribunal Federal.</p>
+
+            <h5><i class="fas fa-check-circle success-text"></i> Intervalo Intrajornada: <span class="success-text">DEFERIDO</span></h5>
+            <p>O juiz analisou seus cartões de ponto e verificou que, em vários dias, o tempo de intervalo para refeição e descanso era menor do que o mínimo legal (1 hora). Ele condenou a empresa a pagar esses minutos que faltaram para completar o intervalo, com um adicional de 50%, calculados sobre o valor da sua hora normal de trabalho na época. Ele destacou que essa parcela tem natureza indenizatória, ou seja, não gera outros reflexos (como em férias ou 13º).</p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Jornada 12x36 e Horas Extras: <span class="failure-text">IMPROCEDENTE</span></h5>
+            <p>O juiz considerou que a jornada 12x36 que você fazia era válida porque estava prevista em acordo coletivo e é permitida pela lei e por decisões do STF (Tema 1.046). Ele também entendeu que a empresa apresentou cartões de ponto e holerites que mostravam o pagamento de "plantão extra" (folgas trabalhadas) e que a existência de horas extras habituais não invalida a jornada 12x36 ou o banco de horas, conforme a lei (Art. 59-B, CLT). Por isso, ele negou seu pedido de horas extras além do intervalo.</p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Doenças, Suposta Embriaguez e Rescisão Indireta: <span class="failure-text">IMPROCEDENTES</span></h5>
+            <p>O juiz se baseou no laudo do perito médico e não reconheceu que suas doenças (coluna, AVC, questões psicológicas) tivessem relação com o trabalho na empresa. Sobre o episódio de 01/04/2023, ele considerou o laudo médico que disse que o AVC era antigo e não estava ligado àquele dia, e ponderou que, mesmo que você não estivesse embriagada, sua conduta naquele dia não foi decorrente de um AVC. Ele também não considerou a sobrecarga de trabalho como uma falta grave da empresa que justificasse a rescisão indireta. Como você já estava trabalhando em outro lugar, ele entendeu que você que decidiu sair da empresa, e por isso, considerou válido o documento de rescisão apresentado pela empresa. Consequentemente, todos os pedidos ligados à rescisão indireta, como aviso prévio, multa de 40% do FGTS, indenizações por danos morais e materiais, e as multas dos artigos 467 e 477 da CLT (exceto a do 477, que seria deferida depois pelo TRT), foram negados nesta primeira decisão.</p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Litigância de Má-Fé: <span class="failure-text">CONDENADA A PAGAR</span></h5>
+            <p>O juiz entendeu que você agiu de <span class="term">litigância de má-fé<span class="tooltip-text">Litigância de má-fé é quando uma parte no processo age de forma desleal, tentando enganar o juiz ou a outra parte, ou atrasando o processo de propósito. A lei prevê punições para isso.</span></span>, justificando que você fez perguntas sobre temas que já estavam claros no processo e protestou contra prazos. Por isso, ele aplicou uma multa de 3% sobre o valor da causa corrigido contra você. <em class="ref">(Sentença 1ª Instância, ATOrd, ID 6554fad, Fls. 26-27)</em></p>
+
+            <h5>Outras Definições da Sentença:</h5>
+            <ul>
+                <li><i class="fas fa-check-circle success-text"></i> <strong>Justiça Gratuita:</strong> Foi concedida a você, o que significa que você não precisaria pagar as custas do processo.</li>
+                <li><i class="fas fa-info-circle neutral-text"></i> <strong>Honorários Periciais:</strong> A empresa pagaria os honorários do perito de insalubridade (R$ 2.000,00), e a União (já que você tem justiça gratuita) pagaria os honorários do perito médico (R$ 1.000,00).</li>
+                <li><i class="fas fa-info-circle neutral-text"></i> <strong>Honorários Advocatícios de Sucumbência:</strong> Você pagaria 10% sobre os pedidos que perdeu para o advogado da empresa (mas o pagamento ficaria suspenso pela justiça gratuita), e a empresa pagaria 10% sobre o valor que você ganhou (seu proveito econômico) para o seu advogado.</li>
+                <li><i class="fas fa-info-circle neutral-text"></i> <strong>Correção Monetária e Juros:</strong> O juiz determinou que os valores seriam corrigidos pelo IPCA-E até a data em que você entrou com a ação (03/07/2023) e, a partir dessa data, seria aplicada a Taxa SELIC (que já inclui correção e juros).</li>
+            </ul>
+            <p>Para fins de cálculo das custas processuais, o juiz definiu o valor da condenação em R$ 20.000,00.</p>
+        </div>
+
+        <div class="process-step">
+            <h4>7. Seu Recurso ao TRT-15 (2ª Instância – <i class="fas fa-upload"></i> Outubro/2024 a Maio/2025)</h4>
+            <p>Como você não concordou totalmente com a sentença do juiz de primeira instância, sua defesa apresentou um <span class="term">Recurso Ordinário<span class="tooltip-text">Recurso Ordinário (RO) é o tipo de recurso mais comum na Justiça do Trabalho contra a sentença de primeira instância. Ele leva o processo para ser reavaliado por um grupo de juízes (desembargadores) em um Tribunal Regional do Trabalho (TRT).</span></span> para o Tribunal Regional do Trabalho da 15ª Região (TRT-15). Este recurso foi registrado no TRT em <strong>04 de novembro de 2024</strong> <em class="ref">(ROT, Fl. 1)</em>.</p>
+            <p>No seu recurso, você pediu para os desembargadores do TRT reavaliarem a sentença e a reformarem (mudarem) em alguns pontos, buscando:</p>
+            <ul>
+                <li>Retirar a multa por litigância de má-fé que o juiz aplicou contra você.</li>
+                <li>Reconhecer a rescisão indireta do seu contrato e, consequentemente, o direito às verbas rescisórias como se fosse uma demissão sem justa causa.</li>
+                <li>Condenar a empresa a pagar a multa do Artigo 477 da CLT pelo atraso no pagamento das verbas rescisórias.</li>
+                <li>Receber indenizações por danos morais (pela acusação de embriaguez e pela doença ocupacional).</li>
+                <li>Declarar a jornada 12x36 inválida e condenar a empresa ao pagamento de horas extras.</li>
+                <li>Aumentar o percentual dos honorários advocatícios devidos ao seu advogado.</li>
+            </ul>
+        </div>
+
+        <div class="process-step">
+            <h4>8. O Acórdão do TRT-15 – A Visão dos Desembargadores (<i class="fas fa-gavel"></i> Fevereiro/2025)</h4>
+            <p>Em <strong>25 de fevereiro de 2025</strong>, a 8ª Câmara do TRT-15 julgou seu recurso e proferiu um <span class="term">Acórdão<span class="tooltip-text">Acórdão é a decisão tomada por um grupo de juízes (desembargadores) de um Tribunal sobre um recurso. É a decisão da segunda instância.</span></span> <em class="ref">(ROT, ID 363c95e, Fls. 53-67)</em>. Veja como os desembargadores decidiram sobre cada ponto que você recorreu:</p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Preliminar de Nulidade por Cerceamento de Defesa: <span class="failure-text">REJEITADA</span></h5>
+            <p>Você alegou que seu direito de defesa foi limitado porque o juiz não permitiu algumas perguntas e não ouviu outras testemunhas. No entanto, o TRT não concordou e manteve a decisão do juiz de primeira instância. Eles argumentaram que o juiz é quem decide quais provas são necessárias para formar seu convencimento e que ele explicou os motivos para não ouvir as outras testemunhas, citando o <span class="term">Artigo 371 do CPC<span class="tooltip-text">O Artigo 371 do CPC permite que o juiz aprecie livremente as provas dos autos e forme seu convencimento, desde que fundamente sua decisão.</span></span>. O laudo pericial também foi considerado válido pelo Tribunal.</p>
+
+            <h5><i class="fas fa-check-circle success-text"></i> Multa por Litigância de Má-Fé: <span class="success-text">PROVIDO SEU RECURSO (MULTA AFASTADA)</span></h5>
+            <p>Esta foi uma vitória importante! Os desembargadores do TRT entenderam que você não agiu de má-fé. Eles consideraram que suas perguntas e pedidos de prazo eram apenas o exercício do seu direito de defesa e de petição, e não uma tentativa de atrapalhar o processo. Por isso, eles retiraram a multa que havia sido aplicada contra você. <em class="ref">(ROT, ID 363c95e, Fl. 56)</em></p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Rescisão Indireta: <span class="failure-text">NEGADO PROVIMENTO (DECISÃO DE 1ª INSTÂNCIA MANTIDA)</span></h5>
+            <p>O TRT manteve a decisão de primeira instância e não reconheceu a rescisão indireta. Eles concordaram que você não conseguiu provar uma falta grave da empresa. O Tribunal deu bastante peso aos relatos escritos de outros funcionários sobre o seu comportamento no dia 01/04/2023, citando que eles informaram um estado de "euforia e exaltação".</p>
+            <blockquote>"De outro bordo, ressalto que a reclamada juntou aos autos relatos escritos a mão de quatro funcionários do hospital, todos informando o estado de euforia e exaltação da reclamante no dia 01.04.2023, bem assim a notória impossibilidade de cuidar de seus pacientes no hospital naquelas condições. Alguns deles mencionam que a demandante falava alto, dava risadas e que estava feliz e animada porque 'a noite foi de festa' (fls. 259 e seguintes)." <em class="ref">(ROT, ID 363c95e, Fl. 57)</em></blockquote>
+            <p>O Tribunal também considerou o laudo médico que afastou a relação do episódio com um AVC. Como a rescisão indireta não foi reconhecida, os pedidos relacionados a ela (aviso prévio, multa de 40% do FGTS) também foram negados.</p>
+
+            <h5><i class="fas fa-check-circle success-text"></i> Multa do Artigo 477 da CLT: <span class="success-text">PROVIDO SEU RECURSO (MULTA DEFERIDA)</span></h5>
+            <p>Outra vitória! O TRT decidiu que a empresa deve pagar a multa do Artigo 477 da CLT. Eles entenderam que a empresa não comprovou que pagou as verbas rescisórias no prazo legal de 10 dias após você comunicar a rescisão indireta em 07/06/2023. O acórdão menciona que a empresa apenas juntou um telegrama chamando para homologação, mas não o comprovante de pagamento. <em class="ref">(ROT, ID 363c95e, Fl. 58)</em></p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Indenização por Danos Morais (Acusação de Embriaguez e Doença Ocupacional): <span class="failure-text">NEGADO PROVIMENTO</span></h5>
+            <p>O TRT manteve a decisão de primeira instância e não concedeu indenização por danos morais. Sobre a acusação de embriaguez, eles consideraram que seu comportamento alterado foi relatado por colegas e que a perícia médica não ligou o episódio a um problema de saúde. Quanto à doença ocupacional, o Tribunal novamente se baseou no laudo pericial que afastou a relação das suas doenças com o trabalho, destacando que você já tinha queixas de dores crônicas antes de ser contratada. <em class="ref">(ROT, ID 363c95e, Fl. 63)</em></p>
+
+            <h5><i class="fas fa-times-circle failure-text"></i> Nulidade do Regime 12x36 e Horas Extras: <span class="failure-text">NEGADO PROVIMENTO</span></h5>
+            <p>O TRT confirmou a validade da sua jornada 12x36 e do banco de horas, citando o acordo coletivo e a decisão do STF. Eles entenderam que, para ter direito a horas extras, você deveria ter apontado precisamente as diferenças devidas, o que, na visão do Tribunal, não foi feito de forma satisfatória.</p>
+
+            <h5><i class="fas fa-check-circle success-text"></i> Honorários Advocatícios para seu Advogado: <span class="success-text">PROVIDO EM PARTE</span></h5>
+            <p>O percentual de honorários para o seu advogado foi mantido em 10%. No entanto, o Tribunal ajustou a base de cálculo para ser sobre o "valor que resultar da liquidação da sentença" <em class="ref">(ROT, ID 363c95e, Fl. 66)</em>. Isso é uma definição técnica que garante que os honorários serão calculados sobre o valor final e exato que você tiver a receber, já com todas as atualizações, o que é mais preciso do que a base definida na primeira instância ("proveito econômico").</p>
+            <p>Para fins de custas do recurso, o TRT rearbitrou o valor da condenação para R$ 23.000,00.</p>
+        </div>
+
+        <div class="process-step">
+            <h4>9. Os Embargos Declaratórios (<i class="fas fa-file-alt"></i> Maio/2025)</h4>
+            <p>Após o acórdão do TRT, sua defesa apresentou <span class="term">Embargos Declaratórios<span class="tooltip-text">Embargos Declaratórios são um tipo de recurso usado para pedir ao juiz ou Tribunal que esclareça pontos de uma decisão que estejam obscuros, contraditórios, omissos ou com erro material. Não servem para mudar o mérito da decisão.</span></span>. O objetivo era pedir esclarecimentos sobre alguns pontos do acórdão, como a validade da jornada 12x36, a rescisão indireta e a punição com suspensão. Em <strong>06 de maio de 2025</strong>, esses embargos foram julgados e <span class="neutral-text">NÃO PROVIDOS</span> <em class="ref">(ROT, ID dde52c3, Fls. 72-78)</em>.</p>
+            <p>O TRT entendeu que não havia nada a ser esclarecido e que você, na verdade, estava tentando rediscutir o mérito das decisões, o que não é a finalidade dos embargos. O acórdão dos embargos declaratórios reafirmou que todas as matérias já haviam sido analisadas no acórdão anterior. <em class="ref">(ROT, ID dde52c3, Fls. 75-76)</em></p>
+        </div>
+
+
+        <h2>IV. Entendendo os Fundamentos Legais das Decisões</h2>
+        <p>As decisões judiciais são baseadas em leis e entendimentos dos tribunais. Abaixo, explico alguns dos artigos e conceitos legais importantes mencionados no seu processo:</p>
+
+        <div class="legal-article">
+            <strong><span class="term">Artigo 818 da CLT<span class="tooltip-text">O Artigo 818 da Consolidação das Leis do Trabalho (CLT) trata do ônus da prova, ou seja, quem tem a responsabilidade de provar os fatos que alega no processo.</span></span>: Ônus da Prova</strong>
+            <span class="article-text">"Art. 818. A prova das alegações incumbe à parte que as fizer."</span>
+            <div class="explanation">
+                <p><strong>O que significa em palavras simples:</strong> Quem afirma algo no processo, geralmente, precisa provar. Se você diz que tinha direito a algo ou que a empresa fez algo errado, a responsabilidade de apresentar as provas é sua (ônus da prova do reclamante). Se a empresa alega um fato impeditivo, modificativo ou extintivo do seu direito, o ônus da prova é dela (ônus da prova da reclamada).</p>
+                <p><strong>No seu processo:</strong> O Tribunal mencionou este artigo ao analisar seus pedidos de rescisão indireta e doença ocupacional. Como você alegou que a empresa cometeu faltas graves e que suas doenças tinham relação com o trabalho, cabia a você provar esses fatos. O Tribunal entendeu que você não conseguiu provar suficientemente esses pontos, por isso os pedidos foram negados.</p>
+            </div>
+        </div>
+
+         <div class="legal-article">
+            <strong><span class="term">Artigo 371 do Código de Processo Civil (CPC)<span class="tooltip-text">O Artigo 371 do Código de Processo Civil (CPC) trata da livre apreciação das provas pelo juiz.</span></span>: Livre Apreciação das Provas</strong>
+            <span class="article-text">"Art. 371. O juiz apreciará a prova constante dos autos, independentemente do sujeito que a tiver promovido, e indicará na decisão as razões da formação de seu convencimento."</span>
+            <div class="explanation">
+                <p><strong>O que significa em palavras simples:</strong> O juiz tem liberdade para analisar todas as provas do processo (documentos, perícias, depoimentos, testemunhas) e formar a sua própria convicção sobre os fatos, desde que explique na decisão por que chegou àquela conclusão.</p>
+                <p><strong>No seu processo:</strong> O Tribunal citou este artigo ao rejeitar sua preliminar de nulidade por cerceamento de defesa (quando você alegou que o juiz não permitiu algumas perguntas ou a oitiva de outras testemunhas). O Tribunal entendeu que o juiz, como destinatário das provas, já tinha elementos suficientes para formar seu convencimento e decidiu com base nas provas que considerou relevantes, explicando seus motivos.</p>
+            </div>
+        </div>
+
+         <div class="legal-article">
+            <strong><span class="term">Artigo 477 da CLT<span class="tooltip-text">O Artigo 477 da CLT estabelece as regras para o pagamento das verbas rescisórias. O § 6º define o prazo de 10 dias e o § 8º prevê uma multa pelo descumprimento.</span></span>: Pagamento das Verbas Rescisórias</strong>
+            <span class="article-text">"Art. 477... § 6º A entrega ao empregado de documentos que comprovem a comunicação da extinção contratual aos órgãos competentes bem como o pagamento dos valores constantes do instrumento de rescisão ou no recibo de quitação deverão ser efetuados nos seguintes prazos: a) até o primeiro dia útil imediato ao término do contrato; ou b) em até dez dias contados a partir do término do contrato. (...) § 8º A inobservância do disposto no § 6º deste artigo sujeitará o infrator ao pagamento da multa em favor do empregado, em valor equivalente ao seu salário, salvo quando, comprovadamente, o empregado der causa à mora."</span>
+            <div class="explanation">
+                <p><strong>O que significa em palavras simples:</strong> Quando o contrato de trabalho termina, a empresa tem prazos para pagar as verbas rescisórias. Se não pagar no prazo (geralmente 10 dias), deve pagar uma multa para o empregado no valor de um salário dele.</p>
+                <p><strong>No seu processo:</strong> Você alegou que a empresa não pagou as verbas rescisórias no prazo após você comunicar a rescisão indireta. O Tribunal verificou que a empresa não comprovou o pagamento dentro dos 10 dias e, por isso, acolheu seu pedido e condenou a empresa a pagar a multa do Artigo 477, § 8º da CLT.</p>
+            </div>
+        </div>
+
+         <div class="legal-article">
+            <strong><span class="term">Artigo 791-A da CLT<span class="tooltip-text">O Artigo 791-A da CLT, introduzido pela Reforma Trabalhista de 2017, trata dos honorários advocatícios de sucumbência na Justiça do Trabalho.</span></span>: Honorários de Sucumbência</strong>
+            <span class="article-text">"Art. 791-A. Ao advogado, ainda que atue em causa própria, serão devidos honorários de sucumbência, fixados entre o mínimo de 5% (cinco por cento) e o máximo de 15% (quinze por cento) sobre o valor que resultar da liquidação da sentença, do proveito econômico obtido ou, não sendo possível mensurá-lo, sobre o valor atualizado da causa."</span>
+            <div class="explanation">
+                <p><strong>O que significa em palavras simples:</strong> Quem perde um pedido no processo (sucumbe) deve pagar honorários para o advogado da parte contrária. O percentual é definido pelo juiz (entre 5% e 15%) e calculado sobre o valor do pedido que foi perdido, sobre o valor que a parte ganhou, ou sobre o valor da causa, dependendo da situação.</p>
+                <p><strong>No seu processo:</strong> Como você ganhou alguns pedidos (insalubridade, intervalo, multa 477) e perdeu outros (rescisão indireta, dano moral/material, horas extras), tanto você quanto a empresa foram condenadas a pagar honorários para o advogado da parte contrária (sucumbência recíproca). O Tribunal manteve o percentual de 10% para o seu advogado e esclareceu que a base de cálculo será o valor final que você tiver a receber na fase de liquidação.</p>
+            </div>
+        </div>
+
+         <div class="legal-article">
+            <strong><span class="term">Artigo 793-B da CLT<span class="tooltip-text">O Artigo 793-B da CLT define o que é considerado litigância de má-fé, ou seja, quando uma parte age de forma desleal no processo.</span></span>: Litigância de Má-Fé</strong>
+            <span class="article-text">"Art. 793-B. Considera-se litigante de má-fé aquele que: (...) IV - opuser resistência injustificada ao andamento do processo; V - proceder de modo temerário em qualquer incidente ou ato do processo;"</span>
+            <div class="explanation">
+                <p><strong>O que significa em palavras simples:</strong> Uma parte age de má-fé quando tenta atrapalhar o processo de propósito, por exemplo, mentindo, criando dificuldades sem motivo, ou usando o processo de forma irresponsável.</p>
+                <p><strong>No seu processo:</strong> O juiz de primeira instância entendeu que você agiu de má-fé ao insistir em perguntas sobre temas já esclarecidos e protestar contra prazos. Por isso, aplicou uma multa. O Tribunal, no entanto, reverteu essa decisão, entendendo que você apenas exerceu seu direito de defesa e de petição, o que não configura má-fé.</p>
+            </div>
+        </div>
+
+         <div class="image-placeholder">
+                      </div>
+
+
+        <h2>V. O Panorama Final: Seus Direitos e Simulação de Valores</h2>
+        <p>Após a análise de todo o processo e das decisões, os direitos que foram definitivamente reconhecidos a você e que serão calculados na fase de liquidação são:</p>
+        <ul>
+            <li><i class="fas fa-check-circle success-text"></i> Diferenças de Adicional de Insalubridade (grau máximo - 40%);</li>
+            <li><i class="fas fa-check-circle success-text"></i> Diferenças de Intervalo Intrajornada (minutos suprimidos com adicional de 50%);</li>
+            <li><i class="fas fa-check-circle success-text"></i> Multa do Artigo 477 da CLT (equivalente a um salário seu da época da saída).</li>
+        </ul>
+        <p>Você não precisará pagar a multa por litigância de má-fé.</p>
+
+        <div class="calculation-section">
+            <h3>Simulação Detalhada de Valores (Estimativa com Salário Médio)</h3>
+            <p>É fundamental entender que os valores exatos a serem pagos só serão definidos na fase de <span class="term">Liquidação de Sentença<span class="tooltip-text">A Liquidação de Sentença é a etapa do processo onde os valores devidos são calculados de forma detalhada, transformando os direitos reconhecidos na decisão judicial em quantias monetárias exatas, considerando salários, períodos, índices de correção e juros.</span></span>. No entanto, podemos fazer uma simulação para você ter uma ideia, utilizando um salário médio estimado para técnica de enfermagem em São Paulo (R$ 2.435,63 - valor de referência obtido em pesquisas) e o período do seu contrato (18/05/2021 a 07/06/2023).</p>
+
+            <div class="calculation-box">
+                <h4><i class="fas fa-calculator"></i> Como Serão Calculadas as Verbas (Simulação Explicativa)</h4>
+                <table class="calculation-table">
+                    <thead>
+                        <tr>
+                            <th>Verba Deferida</th>
+                            <th>Como o Cálculo Será Feito na Liquidação (Base)</th>
+                            <th>Exemplo Simulado (para 1 mês ou pontual)</th>
+                            <th>Observações Importantes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adicional de Insalubridade (40%)</td>
+                            <td>40% sobre o Salário Mínimo vigente em cada mês do período de 18/05/2021 a 07/06/2023.</td>
+                            <td>Salário Mínimo em 2023 (Ex: R$ 1.320,00) * 40% = <strong>R$ 528,00</strong> (por mês)</td>
+                            <td>Será somado o valor de cada mês do período, usando o Salário Mínimo daquele mês. O período total é de aproximadamente 25.6 meses.</td>
+                        </tr>
+                        <tr>
+                            <td>Reflexos do Adicional em: Férias + 1/3, 13º Salário, FGTS (8%)</td>
+                            <td>Calculados sobre o valor mensal do adicional de insalubridade apurado, proporcionalmente aos meses trabalhados no período do contrato.</td>
+                            <td>Varia conforme o valor mensal do adicional e o tempo de serviço.</td>
+                            <td>Estes são acréscimos devidos porque o adicional de insalubridade integra seu salário para todos os efeitos legais.</td>
+                        </tr>
+                        <tr>
+                            <td>Diferenças de Intervalo Intrajornada</td>
+                            <td>Tempo exato de intervalo não concedido em cada dia (conforme cartões de ponto) * Valor da sua Hora Normal na época * 1,5 (adicional de 50%).</td>
+                            <td>Considerando 10 a 20 min de descanso, faltaram 40 a 50 min (média de 45 min = 0.75h). Estimativa Salário/Hora (R$ 2.435,63 / 220) = R$ 11,07. Cálculo p/ dia: 0.75h * R$ 11,07 * 1.5 = <strong>R$ 12,45</strong> (por dia suprimido)</td>
+                            <td>Este valor depende totalmente da análise detalhada dos seus cartões de ponto. O cálculo será feito dia a dia para todo o período do contrato. Estimando 15 dias de trabalho por mês (jornada 12x36), são aprox. 384 dias no período (25.6 meses * 15 dias/mês). Estimativa total: R$ 12,45/dia * 384 dias = <strong>R$ 4.780,80</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td>Multa Artigo 477 CLT</td>
+                             <td>Equivalente ao seu último salário mensal bruto na data da rescisão indireta (07/06/2023).</td>
+                            <td><strong>R$ 2.435,63</strong> (simulado, baseado na média)</td>
+                            <td>Valor fixo, correspondente a um salário seu da época.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="summary-box">
+                <h4><i class="fas fa-money-bill-wave"></i> Valor Total Simulado (Bruto e Líquido - Estimativa Hoje)</h4>
+                <p>Com base na simulação explicativa acima e considerando o período do seu contrato (Maio/2021 a Junho/2023):</p>
+                 <ul>
+                    <li><strong>Estimativa do Adicional de Insalubridade (Bruto):</strong> Aproximadamente R$ 528,00/mês * 26 meses = R$ 13.728,00 (mais reflexos, que podem adicionar cerca de 30-40% a este valor, chegando a aprox. R$ 18.000 - R$ 19.000).</li>
+                     <li><strong>Estimativa das Diferenças de Intervalo (Bruto):</strong> Aproximadamente R$ 4.780,80 (este valor pode variar bastante dependendo da frequência exata da supressão).</li>
+                     <li><strong>Estimativa da Multa Art. 477:</strong> R$ 2.435,63.</li>
+                 </ul>
+
+                <p>Portanto, o **VALOR TOTAL BRUTO ESTIMADO** (soma das verbas deferidas antes de descontos e sem correção/juros futuros) é a soma do adicional de insalubridade (com reflexos estimados), das diferenças de intervalo estimadas e da multa do Art. 477. Uma estimativa bruta inicial, somando os valores simulados (R$ 19.000 + R$ 4.780,80 + R$ 2.435,63), seria em torno de **R$ 26.216,43**. Este valor é uma referência e será apurado precisamente na liquidação.</p>
+
+                <p>Para chegar ao **VALOR TOTAL LÍQUIDO SIMULADO** (o que você receberia efetivamente "hoje", se o processo fosse liquidado e pago agora), teríamos que descontar:</p>
+                <ol>
+                    <li><strong>Contribuição Previdenciária (INSS):</strong> Incide sobre verbas de natureza salarial (adicional de insalubridade e seus reflexos em 13º).</li>
+                    <li><strong>Imposto de Renda (IRPF):</strong> Incide sobre verbas tributáveis (adicional de insalubridade, reflexos em férias + 1/3 e 13º, diferenças de intervalo). O cálculo é feito de forma específica para rendimentos recebidos acumuladamente (RRA) na Justiça do Trabalho, o que pode ser complexo e depende do valor total e do tempo de serviço.</li>
+                    <li><strong>Honorários Advocatícios de Sucumbência:</strong> 10% sobre o valor líquido que você tiver a receber, devidos ao seu advogado.</li>
+                </ol>
+                <p>Calcular o valor líquido exato neste momento é complexo devido às variáveis (valor exato apurado na liquidação, alíquotas de INSS e IRPF na época do pagamento, cálculo do RRA). No entanto, com base na estimativa bruta inicial de R$ 26.216,43, e considerando os descontos médios (que podem variar significativamente), o valor líquido que você receberia "hoje" seria uma fração desse total. A estimativa que você mencionou anteriormente (entre R$ 15.000,00 a R$ 18.000,00) pode servir como uma referência aproximada para o valor líquido *sem* a correção e juros futuros, mas o valor exato só será conhecido após a liquidação formal e aplicação dos descontos.</p>
+            </div>
+
+            <div class="projection-box">
+                <h4><i class="fas fa-clock"></i> Projeção de Recebimento ao Final do Processo (Com Correção e Juros)</h4>
+                <p>Com o julgamento dos Embargos Declaratórios, o processo se aproxima do <span class="term">Trânsito em Julgado<span class="tooltip-text">O Trânsito em Julgado acontece quando não há mais possibilidade de apresentar recursos contra uma decisão judicial, tornando-a definitiva e imutável.</span></span>. Após isso, ele retornará para a Vara do Trabalho de Amparo para as próximas fases:</p>
+                <ol>
+                    <li><strong>Liquidação de Sentença:</strong> O cálculo dos valores exatos. O tempo médio para esta fase pode variar de **3 a 12 meses**, dependendo da complexidade dos cálculos (especialmente a apuração dos intervalos suprimidos) e do volume de trabalho da Vara.</li>
+                    <li><strong>Execução:</strong> A cobrança e o recebimento dos valores. Esta fase pode levar de **6 meses a 2 anos** ou mais, dependendo da capacidade de pagamento da empresa e da necessidade de realizar buscas por bens ou valores (penhora).</li>
+                </ol>
+                <p>Considerando a soma dos prazos médios para a liquidação e a execução, a projeção é que o recebimento do valor devido ocorra em um prazo estimado entre **1 a 3 anos** a partir de agora. Este prazo é uma estimativa e pode ser influenciado por fatores específicos do caso e do andamento processual.</p>
+                 <p>O valor que você receberá ao final será o **valor líquido apurado na liquidação, devidamente atualizado com correção monetária e juros** até a data do efetivo pagamento.</p>
+                 <p><strong>Correção e Juros Aplicados:</strong></p>
+                 <ul>
+                    <li><strong>Até 03/07/2023 (Ajuizamento):</strong> Correção pelo <span class="term">IPCA-E<span class="tooltip-text">IPCA-E (Índice Nacional de Preços ao Consumidor Amplo Especial) é um índice oficial de inflação usado para corrigir valores monetários, aplicado aos débitos trabalhistas na fase anterior ao ajuizamento da ação.</span></span>.</li>
+                    <li><strong>A partir de 03/07/2023:</strong> Aplicação da <span class="term">Taxa SELIC<span class="tooltip-text">A Taxa SELIC (Sistema Especial de Liquidação e de Custódia) é a taxa básica de juros da economia. Na Justiça do Trabalho, a partir do ajuizamento da ação, ela é usada como índice único que engloba tanto a correção monetária quanto os juros.</span></span> (que já inclui correção e juros).</li>
+                 </ul>
+                 <p>Estes índices serão aplicados sobre os valores brutos apurados na liquidação, aumentando o montante a ser pago ao longo do tempo até o efetivo recebimento. Portanto, o valor final que você receberá será significativamente maior do que a estimativa bruta "hoje", devido à incidência desses encargos durante o período de tramitação do processo até o pagamento.</p>
+                 <p><strong>Estimativa do Valor Final (Com Correção e Juros):</strong> É impossível dar um valor exato sem a liquidação e sem saber a data exata do pagamento. No entanto, considerando a estimativa bruta inicial (R$ 26.216,43) e a aplicação da Taxa SELIC ao longo do tempo projetado (1 a 3 anos), o valor final a ser recebido será **substancialmente maior** do que a estimativa bruta inicial, após os descontos legais e honorários advocatícios. A Taxa SELIC atual (referência em Maio/2025) está em torno de XX% ao ano (Nota: O valor exato da SELIC precisaria ser verificado na data do cálculo oficial), o que representa um acréscimo considerável ao longo do período de espera.</p>
+            </div>
+        </div>
+        <h2>VI. Seus Próximos Passos no Processo</h2>
+        <p>Com o julgamento dos Embargos Declaratórios pelo TRT-15, o processo se aproxima de sua conclusão na segunda instância. Os próximos passos geralmente são:</p>
+        <ol>
+            <li><strong>Verificação de Recursos para Instâncias Superiores:</strong> A empresa (Beneficência Portuguesa) ainda pode, teoricamente, tentar recorrer para o Tribunal Superior do Trabalho (TST) em Brasília, por meio de um Recurso de Revista, ou até mesmo para o Supremo Tribunal Federal (STF) via Recurso Extraordinário. No entanto, esses recursos têm requisitos muito específicos e não discutem mais os fatos e provas do caso, apenas questões de interpretação da lei federal ou da Constituição. Seu advogado poderá avaliar a probabilidade e as implicações disso.</li>
+            <li><strong><span class="term">Trânsito em Julgado<span class="tooltip-text">O Trânsito em Julgado ocorre quando não há mais possibilidade de recursos contra uma decisão judicial, seja porque todos os recursos possíveis já foram utilizados, seja porque os prazos para recorrer se esgotaram. A decisão torna-se, então, definitiva e imutável.</span></span>:</strong> Se não houver mais recursos viáveis, ou se os prazos se esgotarem, a decisão do TRT-15 se tornará definitiva (transitará em julgado).</li>
+            <li><strong>Baixa dos Autos à Vara de Origem:</strong> Após o trânsito em julgado, o processo retornará à Vara do Trabalho de Amparo.</li>
+            <li><strong>Início da Fase de Liquidação de Sentença:</strong> Como mencionado, aqui serão calculados os valores exatos que você tem a receber. Você e a empresa poderão apresentar seus cálculos, e o juiz poderá nomear um perito contador para apurar o valor final devido.</li>
+            <li><strong>Início da Fase de <span class="term">Execução<span class="tooltip-text">A Execução é a fase do processo em que se busca o cumprimento forçado da decisão judicial, caso a parte condenada (devedora) não pague voluntariamente o valor devido. Pode envolver medidas como penhora de bens, bloqueio de contas bancárias, etc.</span></span>:</strong> Após o valor ser liquidado (definido), a empresa será intimada a pagar. Se não houver pagamento voluntário no prazo estabelecido pelo juiz, iniciam-se os atos de execução para forçar o pagamento (por exemplo, penhora de dinheiro em contas bancárias, penhora de bens, etc.).</li>
+        </ol>
+
+        <h2>VII. Considerações Finais e Recomendações</h2>
+        <p>Janaina, seu processo teve uma longa jornada, com vitórias importantes e também com pedidos que não foram acolhidos pela Justiça. É fundamental reconhecer que você conseguiu o reconhecimento de direitos significativos, como o adicional de insalubridade, as diferenças de intervalo e a multa pelo atraso no pagamento das verbas rescisórias, além de ter sido isentada da multa por litigância de má-fé.</p>
+        <p>A fase de liquidação e execução pode, por vezes, ser demorada, mas é nela que seus direitos reconhecidos se transformarão em valores concretos. Mantenha uma comunicação constante e próxima com seu advogado, pois ele é a pessoa mais indicada para orientá-la sobre cada novo passo, prazos e providências necessárias.</p>
+        <p>Espero sinceramente que este parecer completo e detalhado tenha sido útil para esclarecer todas as nuances do seu caso e para que você se sinta mais segura e informada sobre seus direitos.</p>
+
+        <div class="signature-block">
+            <p>Coloco-me à sua inteira disposição para quaisquer outros esclarecimentos que se façam necessários.</p>
+            <p>Atenciosamente,</p>
+            <p><strong>Renato Mazzarino</strong></p>
+            <p><em>(founder, CEO)</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Script para garantir que os tooltips funcionem ao passar o mouse
+        document.addEventListener('DOMContentLoaded', function() {
+            const terms = document.querySelectorAll('.term');
+            terms.forEach(term => {
+                term.addEventListener('mouseover', function() {
+                    const tooltip = this.querySelector('.tooltip-text');
+                    if (tooltip) {
+                        tooltip.style.visibility = 'visible';
+                        tooltip.style.opacity = '1';
+                    }
+                });
+                term.addEventListener('mouseout', function() {
+                    const tooltip = this.querySelector('.tooltip-text');
+                     if (tooltip) {
+                        tooltip.style.visibility = 'hidden';
+                        tooltip.style.opacity = '0';
+                    }
+                });
+            });
+
+             const timelineEvents = document.querySelectorAll('.timeline-event');
+            timelineEvents.forEach(event => {
+                event.addEventListener('mouseover', function() {
+                    const tooltip = this.querySelector('.tooltip-text');
+                    if (tooltip) {
+                        tooltip.style.visibility = 'visible';
+                        tooltip.style.opacity = '1';
+                    }
+                });
+                event.addEventListener('mouseout', function() {
+                    const tooltip = this.querySelector('.tooltip-text');
+                     if (tooltip) {
+                        tooltip.style.visibility = 'hidden';
+                        tooltip.style.opacity = '0';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
